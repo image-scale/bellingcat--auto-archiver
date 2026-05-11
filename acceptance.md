@@ -10,14 +10,25 @@
 - [x] All criteria met (see tests/test_module_loading.py)
 
 ## Task 4: Configuration system
+- [x] All criteria met (see tests/test_config.py)
 
-### Config Parsing Acceptance Criteria
-- [ ] read_yaml(filename) loads YAML config file and returns dict
-- [ ] store_yaml(config, filename) saves config to YAML file
-- [ ] read_yaml with missing file returns default empty config structure
-- [ ] Config includes steps section with lists for each module type
+## Task 5: Orchestrator
+- [x] All criteria met (see tests/test_orchestrator.py)
 
-### Config Merging Acceptance Criteria
-- [ ] to_dot_notation(config) flattens nested dict to dot-separated keys
-- [ ] from_dot_notation(dotdict) restores nested dict from flattened
-- [ ] merge_dicts combines CLI args with yaml config, extending lists
+## Task 6: CLI Feeder
+- [x] All criteria met (see tests/feeders/test_cli_feeder.py)
+
+## Task 7: Console Database
+- [x] All criteria met (see tests/databases/test_console_db.py)
+
+## Task 8: Hash Enricher
+- [x] All criteria met (see tests/enrichers/test_hash_enricher.py)
+
+## Task 9: Local Storage
+- [x] All criteria met (see tests/storages/test_local_storage.py)
+
+## Task 10: Mute Formatter
+- [x] All criteria met (see tests/formatters/test_mute_formatter.py)
+
+## Task 11: Generic Extractor
+- [x] All criteria met (see tests/extractors/test_generic_extractor.py)
