@@ -15,7 +15,9 @@ src/webkeeper/core/feeder.py
 src/webkeeper/core/formatter.py
 src/webkeeper/core/media.py
 src/webkeeper/core/metadata.py
+src/webkeeper/core/module.py
 src/webkeeper/core/storage.py
 tests/test_base_modules.py
 tests/test_media.py
 tests/test_metadata.py
+tests/test_module_loading.py

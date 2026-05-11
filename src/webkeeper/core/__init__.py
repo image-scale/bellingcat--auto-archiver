@@ -9,6 +9,7 @@ from .enricher import Enricher
 from .database import Database
 from .storage import Storage
 from .formatter import Formatter
+from .module import ModuleFactory, LazyBaseModule, MANIFEST_FILE, DEFAULT_MANIFEST
 
 __all__ = [
     "Media",
@@ -23,4 +24,8 @@ __all__ = [
     "Database",
     "Storage",
     "Formatter",
+    "ModuleFactory",
+    "LazyBaseModule",
+    "MANIFEST_FILE",
+    "DEFAULT_MANIFEST",
 ]

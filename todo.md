@@ -5,8 +5,8 @@ Start with the core data structures (Media and Metadata), then implement the bas
 
 ## Tasks
 - [x] Task 1: Implement Media and Metadata classes for representing archived content with properties, URL tracking, media type detection, merging capabilities, and JSON serialization
-- [>] Task 2: Implement the base module system with BaseModule and module type classes (Feeder, Extractor, Enricher, Database, Storage, Formatter) that define the plugin interfaces
-- [ ] Task 3: Implement the module discovery and loading system with manifest parsing, lazy loading, dependency checking, and factory pattern for instantiation
+- [x] Task 2: Implement the base module system with BaseModule and module type classes (Feeder, Extractor, Enricher, Database, Storage, Formatter) that define the plugin interfaces
+- [>] Task 3: Implement the module discovery and loading system with manifest parsing, lazy loading, dependency checking, and factory pattern for instantiation
 - [ ] Task 4: Implement the configuration system with YAML parsing, CLI argument generation from module configs, config merging, and validation
 - [ ] Task 5: Implement the orchestrator that coordinates the full archiving pipeline - feeding items, extracting content, enriching, storing, formatting, and database reporting
 - [ ] Task 6: Implement the CLI feeder module that takes URLs from command line arguments and yields Metadata objects for archiving
