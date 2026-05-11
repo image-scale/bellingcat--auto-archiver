@@ -1,26 +1,23 @@
 # Acceptance Criteria
 
 ## Task 1: Media and Metadata classes
+- [x] All criteria met (see tests/test_media.py and tests/test_metadata.py)
 
-### Media Acceptance Criteria
-- [ ] Media created with filename="video.mp4" has media.filename == "video.mp4"
-- [ ] Media with filename="video.mp4" has mimetype == "video/mp4"
-- [ ] Media with filename="image.jpg" returns is_image() == True, is_video() == False
-- [ ] Media.set("author", "John") returns self, Media.get("author") == "John"
-- [ ] Media.add_url("http://cdn.com/file.mp4") adds URL to media.urls list
-- [ ] Media with _key="my/path" has media.key == "my/path"
-- [ ] Media with nested Media in properties yields them via all_inner_media()
+## Task 2: Base module system
 
-### Metadata Acceptance Criteria
-- [ ] Metadata() has default status == "no archiver"
-- [ ] Metadata().set_url("https://example.com").get_url() == "https://example.com"
-- [ ] Metadata.set_url("") raises AssertionError
-- [ ] Metadata.set("title", "Test").get("title") == "Test"
-- [ ] Metadata.success() changes is_success() to True
-- [ ] Metadata.netloc property for "https://example.com/path" returns "example.com"
-- [ ] Metadata.merge() combines two metadata objects, extending media lists
-- [ ] Metadata.add_media() appends to media list, get_media_by_id() retrieves by id
-- [ ] Metadata.set_timestamp() accepts datetime and string, get_timestamp() returns ISO string
-- [ ] Metadata.is_empty() returns True for fresh metadata with only system fields
-- [ ] Metadata.remove_duplicate_media_by_hash() deduplicates based on hash property
-- [ ] Metadata.set_context/get_context() stores and retrieves context values separately from metadata
+### BaseModule Acceptance Criteria
+- [ ] BaseModule.config_setup(config) stores config and sets attributes from config[module_name]
+- [ ] BaseModule provides MODULE_TYPES constant listing all module types
+- [ ] BaseModule.setup() can be overridden for module-specific initialization
+- [ ] BaseModule.auth_for_site(url) retrieves authentication info for a domain from config
+
+### Module Type Acceptance Criteria
+- [ ] Feeder base class has abstract __iter__ method returning Metadata objects
+- [ ] Extractor base class has abstract download(item) method returning Metadata
+- [ ] Extractor.sanitize_url(url) cleans/transforms URLs
+- [ ] Extractor.download_from_url(url, filename) downloads file to local path
+- [ ] Enricher base class has abstract enrich(metadata) method
+- [ ] Database base class has started/failed/aborted/done/fetch methods
+- [ ] Storage base class has abstract get_cdn_url and uploadf methods
+- [ ] Storage.store(media, url, metadata) coordinates key generation and upload
+- [ ] Formatter base class has abstract format(metadata) returning Media

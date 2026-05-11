@@ -7,7 +7,15 @@ src/webkeeper.egg-info/entry_points.txt
 src/webkeeper.egg-info/requires.txt
 src/webkeeper.egg-info/top_level.txt
 src/webkeeper/core/__init__.py
+src/webkeeper/core/base_module.py
+src/webkeeper/core/database.py
+src/webkeeper/core/enricher.py
+src/webkeeper/core/extractor.py
+src/webkeeper/core/feeder.py
+src/webkeeper/core/formatter.py
 src/webkeeper/core/media.py
 src/webkeeper/core/metadata.py
+src/webkeeper/core/storage.py
+tests/test_base_modules.py
 tests/test_media.py
 tests/test_metadata.py
