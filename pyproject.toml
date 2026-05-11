@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webkeeper"
+version = "0.1.0"
+description = "Automatically archive content from web URLs to various storage backends."
+requires-python = ">=3.10"
+license = "MIT"
+authors = [
+    { name = "WebKeeper Team", email = "team@webkeeper.dev" },
+]
+keywords = ["archive", "web", "scraping", "media"]
+
+dependencies = [
+    "dataclasses-json>=0.6.0",
+    "python-dateutil>=2.8.0",
+    "ruamel.yaml>=0.18.0",
+    "python-slugify>=8.0.0",
+    "yt-dlp>=2024.0.0",
+    "requests>=2.31.0",
+    "loguru>=0.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-mock>=3.12.0",
+]
+
+[project.scripts]
+webkeeper = "webkeeper.__main__:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

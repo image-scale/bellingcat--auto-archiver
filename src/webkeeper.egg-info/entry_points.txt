@@ -1,0 +1,2 @@
+[console_scripts]
+webkeeper = webkeeper.__main__:main
