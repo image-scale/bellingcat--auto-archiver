@@ -29,7 +29,7 @@ class Media:
         _mimetype: Cached mimetype of the media file.
     """
 
-    filename: str
+    filename: str = None
     _key: str = None
     urls: List[str] = field(default_factory=list)
     properties: dict = field(default_factory=dict)
