@@ -7,16 +7,17 @@
 - [x] All criteria met (see tests/test_base_modules.py)
 
 ## Task 3: Module discovery and loading system
+- [x] All criteria met (see tests/test_module_loading.py)
 
-### ModuleFactory Acceptance Criteria
-- [ ] ModuleFactory.available_modules() scans module paths and returns LazyBaseModule list
-- [ ] ModuleFactory.get_module_lazy(name) returns LazyBaseModule without loading code
-- [ ] ModuleFactory.get_module(name, config) loads and configures a module instance
-- [ ] ModuleFactory.setup_paths(paths) adds additional search paths for modules
+## Task 4: Configuration system
 
-### LazyBaseModule Acceptance Criteria
-- [ ] LazyBaseModule.manifest property parses __manifest__.py and returns dict
-- [ ] LazyBaseModule.type returns module type(s) from manifest
-- [ ] LazyBaseModule.configs returns module configuration options from manifest
-- [ ] LazyBaseModule.load(config) instantiates module, calls config_setup and setup
-- [ ] LazyBaseModule checks dependencies before loading (python packages, binaries)
+### Config Parsing Acceptance Criteria
+- [ ] read_yaml(filename) loads YAML config file and returns dict
+- [ ] store_yaml(config, filename) saves config to YAML file
+- [ ] read_yaml with missing file returns default empty config structure
+- [ ] Config includes steps section with lists for each module type
+
+### Config Merging Acceptance Criteria
+- [ ] to_dot_notation(config) flattens nested dict to dot-separated keys
+- [ ] from_dot_notation(dotdict) restores nested dict from flattened
+- [ ] merge_dicts combines CLI args with yaml config, extending lists

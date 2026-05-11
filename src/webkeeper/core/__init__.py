@@ -10,6 +10,16 @@ from .database import Database
 from .storage import Storage
 from .formatter import Formatter
 from .module import ModuleFactory, LazyBaseModule, MANIFEST_FILE, DEFAULT_MANIFEST
+from .config import (
+    read_yaml,
+    store_yaml,
+    to_dot_notation,
+    from_dot_notation,
+    merge_dicts,
+    is_valid_config,
+    EMPTY_CONFIG,
+    DEFAULT_CONFIG_FILE,
+)
 
 __all__ = [
     "Media",
@@ -28,4 +38,12 @@ __all__ = [
     "LazyBaseModule",
     "MANIFEST_FILE",
     "DEFAULT_MANIFEST",
+    "read_yaml",
+    "store_yaml",
+    "to_dot_notation",
+    "from_dot_notation",
+    "merge_dicts",
+    "is_valid_config",
+    "EMPTY_CONFIG",
+    "DEFAULT_CONFIG_FILE",
 ]
