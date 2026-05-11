@@ -20,6 +20,7 @@ from .config import (
     EMPTY_CONFIG,
     DEFAULT_CONFIG_FILE,
 )
+from .orchestrator import Orchestrator
 
 __all__ = [
     "Media",
@@ -46,4 +47,5 @@ __all__ = [
     "is_valid_config",
     "EMPTY_CONFIG",
     "DEFAULT_CONFIG_FILE",
+    "Orchestrator",
 ]
